@@ -10,3 +10,9 @@ eframe = "0.19.0"
 rand = "0.8.5"
 winreg = "0.10.1"
 winsafe = { version = "0.0.11", features = ["kernel"] }
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+strip = true
